@@ -1,0 +1,104 @@
+html {
+	background: white;
+	}
+body {
+	background-image: url("http://127.0.0.1/projects/The%20Math%20Game%20Dev/images/bkground.jpg");
+	background-repeat: repeat;
+	max-width: 591px;
+	min-height: 800px;
+	padding: .9em;
+	margin: 0 auto;
+	margin-top: .9em;
+	border: .3em solid #4E5052;
+	border-radius: 2.1875em;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-o-border-radius: 1em;
+	}
+h1 {
+	font-size: 1.9em;
+	}
+h2 {
+	font-size: 1.6em;
+	}
+h3 {
+	font-size: 1.13em;
+	}
+p {
+	font-size: 1.13em;
+	}
+.apptitle {
+	margin-bottom: 1.7em;
+	}
+.gamleg h3, .levleg h3 {
+	font-size: 1.3em;
+	}
+.adderation {
+	width: 11em;
+	}
+.multiplicate {
+	width: 11em;
+	}
+.gamebox {
+	margin-bottom: .7em;
+	}
+.gblock {
+	width: 40%;
+	}
+.levelbox {
+	margin-bottom: 1.9em;
+	}
+input[type="radio"].lev_rad + label span {
+	margin-left: .8em;
+	margin-right: .8em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	}
+.speedbox {
+	min-width: 2.7em;
+	min-height: 1.8em;
+	font-size: 1.2em;
+	line-height: 1.8em;
+	}	
+.btn1 {
+	min-width: 7em;
+	min-height: 3.5em;
+	font-size: 1.2em;
+	}
+.btn2 {
+	min-width: 8em;
+	min-height: 5em;
+	font-size: 1.2em;
+	}
+.about1 {
+	margin-top: 1.7em;
+}
+.stat1 {
+	margin-top: 1.7em;
+	margin-left: 1.2em;
+	margin-right: 1.2em;
+	}
+.playgame1 {
+	margin-top: 1.7em;
+	}		
+.compbox {
+	margin-top: 2.3em;
+	}	
+.main_panel {
+	margin-top: 1em;
+	}	
+.statics{
+	max-width: 70%;
+	margin-top: 1.1em;
+	margin-bottom: 1.3em;
+	}	
+.buttongrp {
+	margin-top: 1.3em;
+	margin-bottom: .2em;
+	}
+.buttongrp button {
+	margin-left: .4em;
+	margin-right: .4em;
+	}
+
+

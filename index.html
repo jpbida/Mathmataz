@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>A Mental Math Game</title>
+		<meta name="Description" CONTENT="A mental math game of addition, subtraction, multiplication, and division" />
+		<link rel="canonical" href="http://www.mathmataz.com" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="A Mental Math Game" />
+		<meta property="og:description" content="A mental math game of addition, subtraction, multiplication, and division" />
+		<meta property="og:url" content="http://www.mathmataz.com" />
+		<meta property="og:image" content="http://www.mathmataz.com/images/mathmataz.jpg" />
+		<meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ChrisGaneyMedia" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" media="only screen and (min-width : 591px) and (orientation:portrait), screen and (min-width: 1025px)" href="css/desk.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 460px) and (max-width: 1024px) and (orientation:landscape)" href="css/scape.css" />
+	</head>
+	<body>
+		<div id="aboutpage">
+			<div class="welcome">
+				<h1>Welcome to</h1>
+			</div>
+			<div class="apptitle frontpage">
+				<h1 >Mathmataz</h1>
+			</div>
+			<div>
+				<a id="begingame"class="bigbutton" href="javascript:void(0)">Play Mathmataz</a>
+			</div>
+			<div class="aboutgame">
+				<h2>About Mathmataz</h2>
+				<h3>
+					Mathmataz is a mental math game where you must keep a running total as numbers are added,
+					subtracted, multiplied and divided. The game 'Up or Down' is strictly addition and subtraction.
+					The game 'The Big Four' involves addition and subtraction as well as multiplication and division.
+					You can choose from 5 levels of difficulty and change the speed at which the game is played.
+					After each round, you are given an opportunity to review the last game. You can also visit the
+					Stats page to see how many games you've won or lost, your Best Game, and your performance in
+					the last 10 rounds. Improve your mental math abilities by playing Mathmataz, and don't forget
+					to have fun!
+				</h3>
+				<h2>Privacy Policy</h2>
+				<h3>
+					This is the privacy policy for Mathmataz, which is a mental math game
+					created by Christopher Ganey. This application collects no information
+					about you, your browser, or your viewing device, nor does it transmit any information
+					to other applications or web sites. If enabled by your browser, this application will save
+					your game statistics and settings to your browser's local storage, and it will retrieve that information
+					the next time you play the game. This information can be removed from your browser's local storage by
+					clearing your browsing data. When you visit www.mathmataz.com, the game is loaded into your browser.
+					You can continue to play the game whether you are online or offline until you close the browser window.
+					If you have any questions about this application, please send an email to chrisganeymedia@gmail.com.
+				</h3>
+			</div>
+		</div>
+		<div id="settings" class="displayno">	
+			<header>
+			   <div class="apptitle">
+					<h1 >Mathmataz</h1>
+				</div>
+			</header>
+			<div class="gamebox"> 
+				<div class="gblock">
+					<legend class="gamleg adderation"><h3>Addition and <br />Subtraction:</h3></legend>
+					<input type="radio" name="radio-game" id="game1" class="gam_rad" value="1" checked="checked" />
+					<label for="game1"><span class="updown"><div class="btborder"><p>Up or Down</p></div></span></label>
+				</div>
+				<div class="gblock">
+					<legend class="gamleg multiplicate"><h3>Add, Subtract, <br />Multiply, Divide:</h3></legend>
+					<input type="radio" name="radio-game" id="game2" class="gam_rad" value="2"  />
+					<label for="game2"><span class="bigfour"><div class="btborder"><p>The Big Four</p></div></span></label>
+				</div>
+			</div>
+			<div class="levelbox">
+				<legend class="levleg"><h3>Choose Your Level</h3></legend>
+				<input type="radio" name="radio-level" id="rad1" class="lev_rad" value="ch1" checked="checked" />
+				<label for="rad1"><span class="lev1"><div class="inborder"><p>1</p></div></span></label>
+				<input type="radio" name="radio-level" id="rad2" class="lev_rad" value="ch2"  />
+				<label for="rad2"><span class="lev2"><div class="inborder"><p>2</p></div></span></label>
+				<input type="radio" name="radio-level" id="rad3" class="lev_rad" value="ch3"  />
+				<label for="rad3"><span class="lev3"><div class="inborder"><p>3</p></div></span></label>
+				<input type="radio" name="radio-level" id="rad4" class="lev_rad" value="ch4"  />
+				<label for="rad4"><span class="lev4"><div class="inborder"><p>4</p></div></span></label>
+				<input type="radio" name="radio-level" id="rad5" class="lev_rad" value="ch5"  />
+				<label for="rad5"><span class="lev5"><div class="inborder"><p>5</p></div></span></label>
+			</div>
+			<div class="sliddiv">
+				<label for="slidespeed">Choose Your Speed</label>
+				<input type="range" name="slider1" id="slidespeed" class="slide1" value="200" min="100" max="500" step="50" />
+				<div id="speedout" class="speedbox"><p>0</p></div>
+			</div>
+			<div class="centerbtns">
+				<button type="button" id="about" class="about1 btn1">About</button>
+				<button type="button" id="status" class="stat1 btn1">Stats</button>
+				<button type="button" id="go" class="playgame1 btn1">Play</button>
+			</div>
+		</div>
+		<div id="play" class="displayno">
+			<header>
+			   <h1 id="levelhead" class="pgheader"></h1>
+			</header>
+			<div class="compbox">
+					<p id="comp" class="ptext hidden"></p>
+			</div>
+			<div class="main_panel displayno" id="main_pad">
+				<div class="num_ton" id="1">1</div>
+				<div class="num_ton" id="2">2</div>
+				<div class="num_ton" id="3">3</div>
+				<div class="num_ton" id="4">4</div>
+				<div class="num_ton" id="5">5</div>
+				<div class="num_ton" id="6">6</div>
+				<div class="num_ton" id="7">7</div>
+				<div class="num_ton" id="8">8</div>
+				<div class="num_ton" id="9">9</div>
+				<div class="num_ton" id="0">0</div>
+				<div class="num_bac" id="back"><</div>
+				<div class="num_ent" id="entre">E</div>
+			</div>
+		</div>
+		<div id="showstat" class="displayno">
+			<h1 id="stathead" class="statheader displayno"></h1>
+			<h1 id="levhead" class="levheader displayno"></h1>
+			<div class="buttongrp_1">
+				<button type="button" id="setup1" class="gosettings btn1">Home</button>
+				<button type="button" id="statsb1" class="stat2 btn1">Stats</button>
+				<button type="button" id="re_view1" class="rev btn1">Review</button>
+			</div>
+			<div id="statshow" class="statics">
+			</div>
+			<div class="playgame3">
+				<button type="button" id="pgame1" class="btn2">Play</button>
+			</div>
+			<div class="buttongrp">
+				<button type="button" id="statsb" class="stat2 btn1">Stats</button>
+				<button type="button" id="pgame" class="playgame2 btn2">Play</button>
+				<button type="button" id="re_view" class="rev btn1">Review</button>
+			</div>
+			<button type="button" id="setup" class="gosettings btn1">Home</button>
+			<div id="slide" class="sliddiv slid_scape">
+				<label for="slidespeed2">Choose Your Speed</label>
+					<input type="range" name="slider2" id="slidespeed2" value="200" min="100" max="500" step="50" />
+					<div id="slideout" class="speedbox">0</div>
+			</div>
+		</div>
+			<script src="js/math.js"></script>
+	 </body>
+</html>

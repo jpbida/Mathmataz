@@ -1,0 +1,133 @@
+body {
+	background-image: url("http://127.0.0.1/projects/The%20Math%20Game%20Dev/images/bkground1.jpg");
+	background-repeat: repeat;
+	}
+@media screen and (min-width: 460px) and (max-width: 600px) and (orientation:landscape) {
+	body {
+		font-size: 90%;
+		}
+	}
+@media screen and (min-width: 601px) and (max-width: 800px) and (orientation:landscape) {
+	body {
+		font-size: 95%;
+		}
+	}
+@media screen and (min-width: 800px) and (max-width: 1024px) and (orientation:landscape) {
+	body {
+		font-size: 108%;
+		}
+	}
+@media screen and (min-width: 460px) and (max-width: 849px) and (orientation:landscape) {
+	.apptitle {
+		margin-bottom: .6em;
+		}
+	}
+@media screen and (min-width: 850px) and (max-width: 1024px) and (orientation:landscape) {
+	.apptitle {
+		margin-bottom: .7em;
+		}
+	}
+@media screen and (min-width: 460px) and (max-width: 849px) and (orientation:landscape) {
+	.gamebox {
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: .7em;
+		}
+	}
+@media screen and (min-width: 850px) and (max-width: 1024px) and (orientation:landscape) {
+	.gamebox {
+		margin-bottom: 1.4em;
+		}
+	}
+.gblock {
+	width: 40%;
+	margin-left: .8em;
+	margin-right: .8em;
+	}
+.gblock.gamleg {
+	width: 16em;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: center;
+	vertical-align: top;
+	}
+.gamleg h3, .levleg h3 {
+	font-size: 1.1em;
+	}
+.adderation {
+	margin-bottom: .6em;
+	}
+.multiplicate {
+	margin-bottom: .6em;
+	}
+input[type="radio"].gam_rad + label span {
+	text-align: center;
+	width: 10em;
+	margin: 0 auto;
+	}
+@media screen and (min-width: 460px) and (max-width: 849px) and (orientation:landscape) {
+	.levelbox {
+		margin-bottom: .3em;
+		}
+	}
+@media screen and (min-width: 850px) and (max-width: 1024px) and (orientation:landscape) {
+	.levelbox {
+		margin-bottom: .9em;
+		}
+	}
+input[type="range"] {
+	width: 90%;
+	}
+@media screen and (min-width: 460px) and (max-width: 849px) and (orientation:landscape) {
+	.stat1,.about1,.playgame1 {
+		margin-top: 1.3em;
+		}
+	}
+@media screen and (min-width: 850px) and (max-width: 1024px) and (orientation:landscape) {
+	.stat1,.about1,.playgame1 {
+		margin-top: 1.5em;
+		}
+	}
+.btn2 {
+	min-width: 6em;
+	min-height: 6em;
+	}
+.main_panel{
+	width: 29.5em;
+	height: 19em;
+	}
+.buttongrp_1 {
+	display: inline-block;
+	}
+
+.statics {
+	display: inline-block;
+	width: 55%;
+	vertical-align: top;
+	margin-top: 1em;
+	}
+.playgame2 {
+	display: none;
+	}
+.playgame3 {
+	display: inline-block;
+	}
+.buttongrp {
+	display: none;
+	}
+.gosettings {
+	display: none;
+	}
+@media screen and (min-width: 460px) and (max-width: 849px) and (orientation:landscape) {
+	.sliddiv.slid_scape {
+		margin-top: .5em;
+		margin-bottom: 1em;
+		}
+	}
+@media screen and (min-width: 850px) and (max-width: 1024px) and (orientation:landscape) {
+	.sliddiv.slid_scape {
+		margin-top: 2em;
+		margin-bottom: 1em;
+		}
+	}
+
