@@ -139,7 +139,15 @@ var theMathGame = (function() {
 						d = Math.floor((a / b) * 100);
 					}
 					
-					newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + '<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + '</small></div><br /><span class="statstyle">Total Games: </span>' + b + '<br /><span class="statstyle">Percent Won:  </span>' + d + '%<br /><span class="statstyle">Best Game:  Level </span>' + e + '<span class="statstyle speedcent"> Speed </span>' + f + '<br /><span class="statstyle">Last 10 Games: </span><br /><span class="recentpad"><small>most recent</small>--\></span><span class="streakpad">' + c + '</span></strong>';
+					newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + 
+					'<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + 
+					'</small></div><br /><span class="statstyle">Total Games: </span>' + b + 
+					'<br /><span class="statstyle">Percent Won:  </span>' + d + 
+					'%<br /><span class="statstyle">Best Game:  Level </span>' + e + 
+					'<span class="statstyle speedcent"> Speed </span>' + f + 
+					'<br /><span class="statstyle">Last 10 Games: </span><br />' +
+					'<span class="recentpad"><small>most recent</small>--\></span>' +
+					'<span class="streakpad">' + c + '</span></strong>';
 					return newstrngi;
 			}
 			
@@ -186,7 +194,11 @@ var theMathGame = (function() {
 				// Functions for clearing stats for current game
 				clearprompt: function() {
 					byId('statshow').className += 'displayno';
-					byId('statshow').innerHTML = '<div class="statisclear"><p>Clear stats for the game: </p><br /><span class="clrgmfont"><p>' + thegame + '</p></span><br /><div class="clearchoice" id="cancel1"><p>Cancel</p></div><div class="clearchoice" id="clear1"><p>Clear</p></div></div>';
+					byId('statshow').innerHTML = '<div class="statisclear">' +
+						'<p>Clear stats for the game: </p><br />' +
+						'<span class="clrgmfont"><p>' + thegame + '</p></span><br />' +
+						'<div class="clearchoice" id="cancel1"><p>Cancel</p></div>' +
+						'<div class="clearchoice" id="clear1"><p>Clear</p></div></div>';
 					byId('statshow').className = 'statics';
 				},
 				cancelprompt: function() {
@@ -240,8 +252,8 @@ var theMathGame = (function() {
 	/* This module handles game play from the moment that the user clicks play until the correct answer	*
 	/* is displayed. ShowProblem() shows the user the problem. Typeanswer() displays a number pad that 	*
 	/* the user can use to input his or her answer. Answer() displays the correct answer and displays 	*
-	/* a message. 		   																				*					
-	/*   * Typeanswer() adds and removes its own event listeners for the number pad.					*																								   	*
+	/* a message. 		   										*					
+	/*   * Typeanswer() adds and removes its own event listeners for the number pad.			*																								 
 	/***************************************************************************************************/
 	var interactWithUser = (function() {
 		var problemo = [];
@@ -1206,7 +1218,9 @@ var theMathGame = (function() {
 		var streak = 0;
 		var streakstate = 0;
 		var i = getRandom(0,9);
-		var posExclaim = ["Awesome!","Good Job!","Ka-Pow!","Rock On!","Super Job!","Shazam!","Wheeew Wee!","Great Going!","Bam!","All Right!","Holy Moly!","Wow!","Jumpin Junipers!","Yeah!","High Five!"];
+		var posExclaim = ["Awesome!","Good Job!","Ka-Pow!","Rock On!","Super Job!","Shazam!",
+			"Wheeew Wee!","Great Going!","Bam!","All Right!","Holy Moly!","Wow!",
+			"Jumpin Junipers!","Yeah!","High Five!"];
 		
 		function getRandom(min, max) {
 			return Math.floor(Math.random() * (max - min + 1)) + min;
