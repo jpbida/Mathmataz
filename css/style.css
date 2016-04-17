@@ -1,6 +1,6 @@
 
 body {
-	background-image: url("http://127.0.0.1/projects/The%20Math%20Game%20Dev/images/bkground.jpg");
+	background-image: url("http://127.0.0.1/projects/Mathmataz/images/bkground.jpg");
 	background-repeat: repeat;
 	font-size: 100%;
 	font-family: arial;
@@ -518,7 +518,7 @@ input[type=range]:focus::-ms-fill-upper {
 	margin-top: 0.3em;
 	padding: .625em;
 	}
-.num_ton,.num_bac,.num_ent {
+.num_ton,.num_bac,.num_bac1,.num_ent {
 	width: 2.1em;
 	line-height: 1.75em;
 	color: #4E5052;
@@ -537,6 +537,9 @@ input[type=range]:focus::-ms-fill-upper {
 .num_ent {
 	color: #4DE35A;
 	background: #F0F6FA;
+	}
+.num_bac1 {
+	display: none;
 	}
 .num_ton:hover, .num_bac:hover {
 	background: #70BAFA;
@@ -693,7 +696,7 @@ input[type=range]:focus::-ms-fill-upper {
 	display: block;
 	margin-bottom: .8em;
 	}
-.adspot {   /* .adspot is a div at bottom of id=settings. .adspot.statspot is div at bottom of id=showstat. Not currently in html */
+.adspot {   /* .adspot is Not currently in html */
 	width: 100%;
 	height: 25em;
 	}

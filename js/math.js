@@ -103,7 +103,8 @@ var theMathGame = (function() {
 			}
 	})();
 	
-	// This module displays the user's stats, presents options for clearing the stats, and executes the clearing of stats.
+	// This module displays the user's stats, presents options for 
+	// clearing the stats, and executes the clearing of stats.
 	var showstats = (function() {
 			var thegame = "";
 			var statext = "";
@@ -139,7 +140,15 @@ var theMathGame = (function() {
 						d = Math.floor((a / b) * 100);
 					}
 					
-					newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + '<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + '</small></div><br /><span class="statstyle">Total Games: </span>' + b + '<br /><span class="statstyle">Percent Won:  </span>' + d + '%<br /><span class="statstyle">Best Game:  Level </span>' + e + '<span class="statstyle speedcent"> Speed </span>' + f + '<br /><span class="statstyle">Last 10 Games: </span><br /><span class="recentpad"><small>most recent</small>--\></span><span class="streakpad">' + c + '</span></strong>';
+					newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + 
+						'<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + 
+						'</small></div><br /><span class="statstyle">Total Games: </span>' + b + 
+						'<br /><span class="statstyle">Percent Won:  </span>' + d + 
+						'%<br /><span class="statstyle">Best Game:  Level </span>' + e + 
+						'<span class="statstyle speedcent"> Speed </span>' + f + 
+						'<br /><span class="statstyle">Last 10 Games: </span><br />' +
+						'<span class="recentpad"><small>most recent =\> </small></span>' +
+						'<span class="streakpad">' + c + '</span></strong>';
 					return newstrngi;
 			}
 			
@@ -186,7 +195,11 @@ var theMathGame = (function() {
 				// Functions for clearing stats for current game
 				clearprompt: function() {
 					byId('statshow').className += 'displayno';
-					byId('statshow').innerHTML = '<div class="statisclear"><p>Clear stats for the game: </p><br /><span class="clrgmfont"><p>' + thegame + '</p></span><br /><div class="clearchoice" id="cancel1"><p>Cancel</p></div><div class="clearchoice" id="clear1"><p>Clear</p></div></div>';
+					byId('statshow').innerHTML = '<div class="statisclear">' +
+						'<p>Clear stats for the game: </p><br />' +
+						'<span class="clrgmfont"><p>' + thegame + '</p></span><br />' +
+						'<div class="clearchoice" id="cancel1"><p>Cancel</p></div>' +
+						'<div class="clearchoice" id="clear1"><p>Clear</p></div></div>';
 					byId('statshow').className = 'statics';
 				},
 				cancelprompt: function() {
@@ -236,13 +249,13 @@ var theMathGame = (function() {
 		};
 	})();
 	
-	/***************************************************************************************************/
-	/* This module handles game play from the moment that the user clicks play until the correct answer	*
-	/* is displayed. ShowProblem() shows the user the problem. Typeanswer() displays a number pad that 	*
-	/* the user can use to input his or her answer. Answer() displays the correct answer and displays 	*
-	/* a message. 		   																				*					
-	/*   * Typeanswer() adds and removes its own event listeners for the number pad.					*																								   	*
-	/***************************************************************************************************/
+	/***************************************************************************************************
+	* This module handles game play from the moment that the user clicks play until the correct answer *
+	* is displayed. ShowProblem() shows the user the problem. Typeanswer() displays a number pad that  *
+	* the user can use to input his or her answer. Answer() displays the correct answer and displays   *
+	* a message. 		   																			   *					
+	*   * Typeanswer() adds and removes its own event listeners for the number pad.					   *																								   	
+	***************************************************************************************************/
 	var interactWithUser = (function() {
 		var problemo = [];
 		var resolve = 0;
@@ -355,7 +368,8 @@ var theMathGame = (function() {
 					 if (event.target.classList.contains("num_ton")) {
 						numgrab(tid);
 						}
-					if(event.target.classList.contains("num_bac")) {
+					if(event.target.classList.contains("num_bac") ||
+						event.target.classList.contains("num_bac1")) {
 						goback();	
 						}
 					if(event.target.classList.contains("num_ent")) {
@@ -410,7 +424,8 @@ var theMathGame = (function() {
 		};
 	})();
 	
-	// This module contains two functions that create the math problems for their respective games.
+	// This module contains two functions that create the math problems 
+	// for their respective games.
 	var doMath = (function() { 
 		var Indx = NumArIndx;
 		
@@ -432,10 +447,13 @@ var theMathGame = (function() {
 					var c = x;
 					var f = y;
 					var i = lob;
-					var numbers = [17,13,12,4,10,7,11,15,14,18,8,3,5,11,2,19,16,3,20,6,16,4,14,12,10,15,9,20,19,17,13,8,18,6,7,2,5,9,
-						15,18,20,2,4,3,9,11,8,17,18,20,8,14,19,7,3,10,5,4,6,9,13,17,16,2,13,14,5,19,12,15,10,12,7,11,6,16,
-						16,17,4,7,9,15,10,20,9,16,8,3,12,11,19,4,13,14,18,6,18,11,7,10,5,15,19,2,17,6,3,14,13,8,5,20,12,2,
-						4,17,10,8,16,9,12,11,14,20,6,15,18,3,19,13,2,5,7]; //133
+					var numbers = [17,13,12,4,10,7,11,15,14,18,8,3,5,11,2,19,16,
+						3,20,6,16,4,14,12,10,15,9,20,19,17,13,8,18,6,7,2,5,9,15,
+						18,20,2,4,3,9,11,8,17,18,20,8,14,19,7,3,10,5,4,6,9,13,17,
+						16,2,13,14,5,19,12,15,10,12,7,11,6,16,16,17,4,7,9,15,10,
+						20,9,16,8,3,12,11,19,4,13,14,18,6,18,11,7,10,5,15,19,2,17,
+						6,3,14,13,8,5,20,12,2,4,17,10,8,16,9,12,11,14,20,6,15,18,
+						3,19,13,2,5,7]; //133
 					
 					if(i > 114){
 						i = 0;
@@ -607,10 +625,12 @@ var theMathGame = (function() {
 					var b = 0;
 					var c = x;
 					var f = y;
-					var numbers = [17,13,12,4,7,11,15,14,18,8,3,5,11,2,19,16,3,20,6,16,4,14,12,10,15,9,20,19,17,13,8,18,6,7,2,5,9,
-						15,18,20,2,4,3,9,11,8,17,18,20,8,14,19,7,3,10,5,4,6,9,13,17,16,2,13,14,5,19,12,15,12,7,11,6,16,
-						16,17,4,7,9,15,20,9,16,8,3,12,11,19,4,13,14,18,6,18,11,7,10,5,15,19,2,17,6,3,14,13,8,5,20,12,2,
-						13,17,18,8,16,9,12,11,14,20,6,15,10,3,19,4,2,5,7]; //130 missing 3 10's
+					var numbers = [17,13,12,4,7,11,15,14,18,8,3,5,11,2,19,16,3,20,6,16,
+						4,14,12,10,15,9,20,19,17,13,8,18,6,7,2,5,9,15,18,20,2,4,3,9,11,
+						8,17,18,20,8,14,19,7,3,10,5,4,6,9,13,17,16,2,13,14,5,19,12,15,
+						12,7,11,6,16,16,17,4,7,9,15,20,9,16,8,3,12,11,19,4,13,14,18,6,
+						18,11,7,10,5,15,19,2,17,6,3,14,13,8,5,20,12,2,13,17,18,8,16,9,
+						12,11,14,20,6,15,10,3,19,4,2,5,7]; // missing 3 10's
 					var i = lob;
 					if(i > 111){
 						i = 0;
@@ -749,21 +769,25 @@ var theMathGame = (function() {
 									t = "divi";
 									}
 								else if(i !== k1-1){
-									if((answer + (h - j) + h <= k6 && (answer + (h - j) + h) / h <= k4) && ((h - j) + h <= k7 && last !== (h - j) +h)){
+									if((answer + (h - j) + h <= k6 && 
+										(answer + (h - j) + h) / h <= k4) && 
+											((h - j) + h <= k7 && last !== (h - j) +h)){
 										k = (h - j) +h;
 										answer = answer + k;
 										prob.push("plus " + k);
 										i += 1;
 										t = "divi";
 									}
-									else if((answer - (h + j) > h && last !== h + j) && (h + j <= k9)){
+									else if((answer - (h + j) > h && last !== h + j) && 
+										(h + j <= k9)){
 											k = h + j;
 											answer = answer - k;
 											prob.push("minus " + k);
 											i += 1;
 											t = "divi";
 									}
-									else if((h-j > j && (answer + h - j) / h <= k4) && (h - j >= k8 && last !== h - j)) {
+									else if((h-j > j && (answer + h - j) / h <= k4) && 
+										(h - j >= k8 && last !== h - j)) {
 											k = h - j;
 											answer = answer + k;
 											prob.push("plus " + k);
@@ -1062,8 +1086,8 @@ var theMathGame = (function() {
 				bestgame();
 			},
 			
-			// This function is called if the game, level or speed of play changes due to
-			// the user interacting with the Settings page
+			// This function is called if the game, level or speed of play 
+			// changes due to the user interacting with the Settings page
 			changeset: function(a,b){
 				var x = a;
 				var y = b;
@@ -1199,14 +1223,16 @@ var theMathGame = (function() {
 		};
 	})();
 	
-	// This module tracks user progress and delivers a message each time a Best Game is earned
-	// or the user wins 3 games in a row.
+	// This module tracks user progress and delivers a message each time 
+	// a Best Game is earned or the user wins 3 games in a row.
 	var userProgress = (function() {
 		var best = 0;
 		var streak = 0;
 		var streakstate = 0;
 		var i = getRandom(0,9);
-		var posExclaim = ["Awesome!","Good Job!","Ka-Pow!","Rock On!","Super Job!","Shazam!","Wheeew Wee!","Great Going!","Bam!","All Right!","Holy Moly!","Wow!","Jumpin Junipers!","Yeah!","High Five!"];
+		var posExclaim = ["Awesome!","Good Job!","Ka-Pow!","Rock On!","Super Job!","Shazam!",
+			"Wheeew Wee!","Great Going!","Bam!","All Right!","Holy Moly!","Wow!",
+			"Jumpin Junipers!","Yeah!","High Five!"];
 		
 		function getRandom(min, max) {
 			return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -1254,7 +1280,8 @@ var theMathGame = (function() {
 					if(best !== 1) {
 						num = streak + 1;
 						exclaim = userProgress.exclamation();
-						message = "<br />" + exclaim + "<br />That's " + num + " wins in a row!";
+						message = "<br />" + exclaim + "<br />That's " + num + 
+							" wins in a row!";
 						interactWithUser.positivemessageset(message);
 						streakstate = 1;
 					}
@@ -1499,7 +1526,8 @@ var theMathGame = (function() {
 	var NewSpeed = new SetSpeed();
 	NewSpeed.speed("slidespeed",0);
 	
-	 // This module contains handlers for all buttons on pages other than the Settings and About pages.
+	 // This module contains handlers for all buttons on pages other 
+	 // than the Settings and About pages.
 	var handlers = (function() {
 		var p1 = "settings";
 		var p2 = 0;
@@ -1655,11 +1683,11 @@ var theMathGame = (function() {
 		};
 	})();
 	
-	/******************************************************************************
-	/* This module adds and removes all of the app's event listeners except for the
-	/* listener in typeanswer(). The module also contains handlers for the Settings
-	/* page and the About page (the page you see when the app loads).
-	/*******************************************************************************/	
+	/*******************************************************************************
+	* This module adds and removes all of the app's event listeners except for the *
+	* listener in typeanswer(). The module also contains handlers for the Settings *
+	* page and the About page (the page you see when the app loads).               *
+	*******************************************************************************/	
 	var init = (function() {
 		
 		function levelHandler() {
