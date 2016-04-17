@@ -138,29 +138,17 @@ var theMathGame = (function() {
 					}
 					else {
 						d = Math.floor((a / b) * 100);
-					}
-					
-					newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + 
-<<<<<<< HEAD
-						'<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + 
-						'</small></div><br /><span class="statstyle">Total Games: </span>' + b + 
-						'<br /><span class="statstyle">Percent Won:  </span>' + d + 
-						'%<br /><span class="statstyle">Best Game:  Level </span>' + e + 
-						'<span class="statstyle speedcent"> Speed </span>' + f + 
-						'<br /><span class="statstyle">Last 10 Games: </span><br />' +
-						'<span class="recentpad"><small>most recent =\> </small></span>' +
-						'<span class="streakpad">' + c + '</span></strong>';
-=======
+					}	
+				newstrngi = '<strong><span class="statstyle">Wins: </span>' + a + 
 					'<div class="clearstat" id="clrstat"><small>Clear Stats:<br />' + h + 
 					'</small></div><br /><span class="statstyle">Total Games: </span>' + b + 
 					'<br /><span class="statstyle">Percent Won:  </span>' + d + 
 					'%<br /><span class="statstyle">Best Game:  Level </span>' + e + 
 					'<span class="statstyle speedcent"> Speed </span>' + f + 
 					'<br /><span class="statstyle">Last 10 Games: </span><br />' +
-					'<span class="recentpad"><small>most recent</small>--\></span>' +
+					'<span class="recentpad"><small>most recent =\> </small></span>' +
 					'<span class="streakpad">' + c + '</span></strong>';
->>>>>>> origin/master
-					return newstrngi;
+				return newstrngi;
 			}
 			
 			return {
@@ -260,7 +248,6 @@ var theMathGame = (function() {
 		};
 	})();
 	
-<<<<<<< HEAD
 	/***************************************************************************************************
 	* This module handles game play from the moment that the user clicks play until the correct answer *
 	* is displayed. ShowProblem() shows the user the problem. Typeanswer() displays a number pad that  *
@@ -268,15 +255,7 @@ var theMathGame = (function() {
 	* a message. 		   																			   *					
 	*   * Typeanswer() adds and removes its own event listeners for the number pad.					   *																								   	
 	***************************************************************************************************/
-=======
-	/***************************************************************************************************/
-	/* This module handles game play from the moment that the user clicks play until the correct answer	*
-	/* is displayed. ShowProblem() shows the user the problem. Typeanswer() displays a number pad that 	*
-	/* the user can use to input his or her answer. Answer() displays the correct answer and displays 	*
-	/* a message. 		   										*					
-	/*   * Typeanswer() adds and removes its own event listeners for the number pad.			*																								 
-	/***************************************************************************************************/
->>>>>>> origin/master
+
 	var interactWithUser = (function() {
 		var problemo = [];
 		var resolve = 0;
